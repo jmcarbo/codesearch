@@ -12,7 +12,7 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/google/codesearch/sparse"
+	"github.com/jmcarbo/codesearch/sparse"
 )
 
 // Index writing.  See read.go for details of on-disk format.
@@ -92,8 +92,8 @@ func makePostEntry(trigram, fileid uint32) postEntry {
 // or if it contains more than maxTextTrigrams distinct trigrams.
 const (
 	maxFileLen      = 1 << 30
-	maxLineLen      = 2000
-	maxTextTrigrams = 20000
+	maxLineLen      = 20000
+	maxTextTrigrams = 90000
 )
 
 // AddPaths adds the given paths to the index's list of paths.
